@@ -32,4 +32,7 @@ public int deposit(int deposit){
 public int withdrawal(int withdrawl){
         return balance-withdrawl;
 }
+public double interest (double interest){
+        return (balance*interest)+balance;
+}
 }

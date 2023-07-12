@@ -85,4 +85,11 @@ public class BankAccountTest {
         int expected = -12;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    public void canInterest(){
+        double result = bankAccount.interest(0.01);
+        double expected = 0;
+        assertThat(result).isEqualTo(expected);
+    }
 }
