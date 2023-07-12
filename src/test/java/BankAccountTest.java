@@ -87,9 +87,22 @@ public class BankAccountTest {
     }
 
     @Test
-    public void canInterest(){
-        double result = bankAccount.interest(0.01);
+//    public void canInterest(){
+//        double result = bankAccount.interest(0.01);
+//        double expected = 0;
+//        assertThat(result).isEqualTo(expected);
+//    }
+
+    public void canSavingsAccount(){
+        double result = bankAccount.interest("Regular");
         double expected = 0;
         assertThat(result).isEqualTo(expected);
     }
+@Test
+    public void canNotSavingsAccount(){
+        double result = bankAccount.interest("Savings");
+        double expected = 0;
+        assertThat(result).isEqualTo(expected);
+    }
+
 }
