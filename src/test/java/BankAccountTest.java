@@ -79,12 +79,12 @@ public class BankAccountTest {
         int expected = 12;
         assertThat(result).isEqualTo(expected);
 }
-    @Test
-    public void canWithdraw(){
-        int result = bankAccount.withdrawal(12);
-        int expected = -12;
-        assertThat(result).isEqualTo(expected);
-    }
+//  @Test
+// public void canWithdraw(){
+//        int result = bankAccount.withdrawal(12);
+//        int expected = -12;
+//       assertThat(result).isEqualTo(expected);
+//  }
 
     @Test
 //    public void canInterest(){
@@ -104,5 +104,20 @@ public class BankAccountTest {
         double expected = 0;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    public void canNotOverdraft(){
+        String result = bankAccount.withdrawal(11);
+        String expected = "no way jose";
+        assertThat(result).isEqualTo(expected);
+    }
+    @Test
+public void canWithdraw(){
+String result = bankAccount.withdrawal(5);
+ String expected = String.valueOf(-5);
+ assertThat(result).isEqualTo(expected);
+}
+
+
 
 }

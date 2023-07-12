@@ -6,6 +6,7 @@ public class BankAccount {
     private String dateOfBirth;
     private int balance;
     private String accountType;
+    private int overdraft;
 
     public BankAccount() {
         this.firstName = "Rebecca";
@@ -14,6 +15,7 @@ public class BankAccount {
         this.accountNumber = 1234; //enum?
         this.balance = 0;
         this.accountType = "Savings";
+        this.overdraft = -10;
     }
 
     String getFirstName() {
@@ -60,8 +62,10 @@ public class BankAccount {
         return balance + deposit;
     }
 
-    public int withdrawal(int withdrawl) {
-        return balance - withdrawl;
+    public String withdrawal(int withdrawl) {
+        if ( (balance - withdrawl) < -10){
+            return "no way jose";
+        } return String.valueOf(balance-withdrawl);
     }
 
     public double interest(String accountType) {
@@ -70,4 +74,5 @@ public class BankAccount {
         }
         return balance * 1.02;
     }
+
 }
