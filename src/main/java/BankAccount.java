@@ -26,6 +26,10 @@ public class BankAccount {
     public int setAccountNumber(){return this.accountNumber = 5678;}
     public int setBalance(){return this.balance = 12;}
 
-
-
+public int deposit(int deposit){
+        return balance+deposit;
+}
+public int withdrawal(int withdrawl){
+        return balance-withdrawl;
+}
 }

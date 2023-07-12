@@ -73,6 +73,16 @@ public class BankAccountTest {
         int expected = 12;
         assertThat(result).isEqualTo(expected);
     }
-
-
+@Test
+    public void canDeposit(){
+        int result = bankAccount.deposit(12);
+        int expected = 12;
+        assertThat(result).isEqualTo(expected);
+}
+    @Test
+    public void canWithdraw(){
+        int result = bankAccount.withdrawal(12);
+        int expected = -12;
+        assertThat(result).isEqualTo(expected);
+    }
 }
